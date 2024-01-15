@@ -1,0 +1,199 @@
+.orders{
+    display:flex;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+
+}
+
+.orders-container{
+display:flex;
+ flex-direction: column;
+ width: 50%;
+ height: 100%;
+ margin-top: 20px;
+ max-height: 550px;
+ overflow-y: scroll;
+}
+
+.order-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.no-orders-conatiner{
+display:flex;
+ width: 80%;
+ height: 100%;
+ object-fit: contain;
+justify-content: center;
+
+}
+
+.order-container-left{
+
+    display: flex;
+    flex-direction: row;
+}
+.order-container-left-img-container{
+    display: flex;
+    height:100px;
+    width:100px;
+    justify-content:center ;
+    box-sizing: border-box;
+   
+}
+
+.order-container-left-img-container img{
+    max-width:100% ;
+    min-width: 100%;
+    width:auto;
+    height: auto; 
+    margin-left: 20px; 
+    border-radius: 10px; 
+
+}
+
+.order-container-left-details-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+
+
+}
+.order-container-left-details-container label{
+    font-weight: 600;
+
+}
+
+.order-container-right{
+
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.order-container-right label{
+
+    color:rgb(94, 91, 91);
+    font-size: 0.8rem;
+ 
+}
+
+.order-container-right-btn{
+display: flex;
+    width:100%;
+    align-items: flex-end;
+    justify-content:flex-end;
+
+    
+}
+
+.order-container-right-btn button{
+    background: #ff9f00;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    width: 50%;
+
+}
+
+@media (max-width:1024px){
+    .orders-container{
+
+ width: 60%;
+ 
+}
+}
+
+@media (max-width:798px){
+    .orders-container{
+
+ width: 80%;
+ 
+}
+}
+@media (max-width:512px){
+    .orders-container{
+
+ width: 70%;
+ 
+}
+
+
+.order-container{
+    flex-direction: column;
+}
+
+.order-container-right{
+
+  align-items: center;
+
+}
+.order-container-right label{
+    margin-bottom: 10px;
+}
+
+.order-container-right-btn{
+    justify-content: center;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

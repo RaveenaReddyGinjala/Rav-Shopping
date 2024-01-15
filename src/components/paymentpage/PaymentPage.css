@@ -1,0 +1,137 @@
+.paymentpage{
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.paymentpage-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.paymentpage-heading{
+    display: flex;
+    justify-content: center;
+
+}
+
+.paymentpage-card-details{
+    display: flex;
+    height: 90%;
+    width: 80%;
+    flex-direction: column;
+   
+}
+
+.paymentpage-card-conatiner{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+
+.paymentpage-details-container{
+    display: flex;
+    height: 60%;
+    width: 100%;
+}
+
+
+.paymentpage-details{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paymentpage-details input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.paymentpage-details-valid-input{
+
+ width: 45%;
+}
+
+
+.paymentpage-details-valid{
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+}
+
+
+
+.paymentpage-btn{
+    display: flex;
+    flex-direction: row;
+   margin-bottom: 20px; 
+}
+
+
+@media (max-width:1024px) {
+
+    .paymentpage-container{
+        
+        width: 40%;
+        
+    
+    }
+    
+}
+@media (max-width:860px) {
+
+    .paymentpage-container{
+        
+        width: 50%;
+        
+    
+    }
+    
+}
+
+@media (max-width:645px) {
+
+    .paymentpage-container{
+        
+        width: 60%;
+        
+    
+    }
+    
+}
+
+@media (max-width:600px) {
+
+    .paymentpage-container{
+        
+        width: 70%;
+        
+    
+    }
+    
+}
+@media (max-width:500px) {
+
+    .paymentpage-container{
+        
+        width: 95%;
+        
+    
+    }
+    
+}

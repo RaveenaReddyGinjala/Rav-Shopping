@@ -1,0 +1,66 @@
+.address-page{
+    display: flex;
+    height: 80vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.address-page-heading{
+    display: flex;
+    justify-content: center;
+}
+
+.address-page-container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background-color: white;
+padding:20px;
+width: 30%;
+border-radius: 15px;
+min-height: 60%;
+}
+
+.address-page-details{
+    
+ display: flex;
+  margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 70%;
+        width: 100%;
+       
+
+}
+
+.address-page-details input{
+    margin-bottom: 10px;
+    width: 100%;
+
+  
+
+}
+.address-page-details label{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.address-page-state-zipcode{
+    display: flex;
+    flex-direction: row;
+}
+
+.address-page-state{
+    margin-right: 20px;
+}
+
+.address-page-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+

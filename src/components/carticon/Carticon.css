@@ -1,0 +1,26 @@
+
+
+.cart-reddot{
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    font-weight: bold;
+    color: white;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    
+}
+
+@media (max-width: 798px){
+    .cart-reddot{
+       
+        top: 0px;
+        
+    }
+}
