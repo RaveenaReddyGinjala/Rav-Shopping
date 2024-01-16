@@ -11,7 +11,6 @@ import { addProductsToCheckoutPage } from "../../redux/Action";
 
 function Product() {
   const [product, setProduct] = useState({});
-  const [actualPrice, setActualPrice] = useState("");
   const [listImage, setListImage] = useState("");
   const { id } = useParams();
 

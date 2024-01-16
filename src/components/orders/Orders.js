@@ -1,10 +1,9 @@
 import { React, useState } from "react";
 import "./Orders.css";
-import { useSelector, useDispatch } from "react-redux";
-import CustomButton from "../../customcomponents/custombutton/CustomButton";
-import { deleteOrders } from "../../redux/Action";
+import { useSelector } from "react-redux";
+
 import firebase from "../../firebase";
-import { addOrders } from "../../redux/Action";
+
 import { useEffect } from "react";
 import orderempty from "../../assests/ordersempty.png";
 import Loader from "../loader/Loader";
@@ -15,9 +14,6 @@ function Orders() {
 
   const [refreshUI, setRefreshUI] = useState(false);
 
-  const dispatch = useDispatch();
-
-  // const orders = useSelector((state) => state.orders);
   const user = useSelector((state) => state.user);
 
   useEffect(() => {
@@ -33,8 +29,6 @@ function Orders() {
               ([key, value]) => ({ key, ...value })
             );
             setOrders(ordersArray);
-
-            // dispatch(addOrders(ordersArray));
           } else setOrders([]);
 
           setIsLoading(false);
@@ -81,12 +75,6 @@ function Orders() {
                     CANCEL
                   </button>
                 </div>
-
-                {/* <CustomButton
-                    type="primary"
-                    onClick={() => handleOrderCancel(order.key)}
-                    label="CANCEL"
-                  /> */}
               </div>
             </div>
           ))}

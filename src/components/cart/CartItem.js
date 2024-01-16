@@ -22,7 +22,6 @@ function CartItem(props) {
   const isCart = props.type === "cart";
   const dispatch = useDispatch();
 
-  const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
 
   function changeCount(key, changeType) {
@@ -45,21 +44,10 @@ function CartItem(props) {
   }
 
   function handlePlaceOrder() {
-    // dispatch(addProductsToCheckoutPage(myproducts))
-
     dispatch({ type: "CLEAR_CART_FLAG", payload: true });
 
     dispatch(addProductsToCheckoutPage(cart));
     navigate("/checkout");
-
-    // console.log("Raveena", user);
-    // console.log("Raveena", !user);
-
-    // if (user === "") {
-    //   navigate("/login", { state: { referrer: "checkout" } });
-
-    //   return null;
-    // } else navigate("/checkout");
   }
 
   return (

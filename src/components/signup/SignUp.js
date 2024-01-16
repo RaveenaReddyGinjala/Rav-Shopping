@@ -4,7 +4,6 @@ import "./SignUp.css";
 import { GoEye } from "react-icons/go";
 import { GoEyeClosed } from "react-icons/go";
 import { auth } from "../../firebase";
-import { useDispatch } from "react-redux";
 import CustomInput from "../../customcomponents/custominput/CustomInput";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -16,7 +15,6 @@ function SignUp() {
   const location = useLocation();
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
 
   function handleName(e) {

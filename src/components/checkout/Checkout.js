@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import "./Checkout.css";
 import CustomButton from "../../customcomponents/custombutton/CustomButton";
-import { useNavigate, useLocation } from "react-router-dom";
-import { addOrders, addToCart } from "../../redux/Action";
-import firebase from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const location = useLocation();
+
   const cart = useSelector((state) => state.checkedproduct);
   const user = useSelector((state) => state.user);
-  const clearcartFlag = useSelector((state) => state.clearcartFlag);
 
   const cart1 = [
     {
@@ -68,16 +64,9 @@ function Checkout() {
   const [cartDiscount, setCartDiscount] = useState("");
   const [totalAmount, setTotalAmount] = useState("");
 
-  // let totalNewPrice = 0;
-  // let totalOldPrice = 0;
   let deliveryCharges = "free";
 
   useEffect(() => {
-    // cart.map((product) => {
-    //   totalNewPrice = totalNewPrice + product.price;
-    //   totalOldPrice = totalOldPrice + product.oldPrice;
-    // });
-
     const totalNewPrice = cart.reduce(
       (acc, item) => acc + item.price * item.count,
       0
@@ -93,40 +82,7 @@ function Checkout() {
     setTotalAmount(totalNewPrice);
   }, []);
 
-  // function getformattedDate(type, separator = "/") {
-  //   let newDate = new Date();
-
-  //   if (type === "deliverydate") {
-  //     newDate.setDate(newDate.getDate() + 4);
-  //   }
-
-  //   let date = newDate.getDate();
-  //   let month = newDate.getMonth() + 1;
-  //   let year = newDate.getFullYear();
-  //   return `${date}${separator}${
-  //     month < 10 ? `0${month}` : `${month}`
-  //   }${separator}${year}`;
-  // }
-
   function handleCheckout() {
-    // //move this code to payment page later
-
-    // const modifiedcheckedproduct = cart.map((item) => {
-    //   const orderplaceddate = getformattedDate("orderplaceddate");
-    //   const deliverydate = getformattedDate("deliverydate");
-
-    //   return { ...item, orderplaceddate, deliverydate };
-    // });
-
-    // modifiedcheckedproduct.map((item) => {
-    //   firebase.database().ref("orders").child(user).push(item);
-    // });
-
-    // // dispatch(addOrders(modifiedcheckedproduct));
-    // if (clearcartFlag) {
-    //   dispatch({ type: "CLEAR_CART" });
-    // }
-    // navigate("/orders");
     navigate("/addresspage");
   }
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ForgotPassword.css";
 import { Link, useNavigate } from "react-router-dom";
-import CustomButton from "../../customcomponents/custombutton/CustomButton";
 import CustomInput from "../../customcomponents/custominput/CustomInput";
 import { auth } from "../../firebase";
 import "react-toastify/dist/ReactToastify.css";

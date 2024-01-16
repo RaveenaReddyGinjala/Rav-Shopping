@@ -11,7 +11,7 @@ import {
 } from "./Util";
 import { useState } from "react";
 import firebase from "../../firebase";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 
@@ -96,7 +96,6 @@ function PaymentPage() {
       firebase.database().ref("carddetails").child(user).push(cardDetails);
     });
 
-    // dispatch(addOrders(modifiedcheckedproduct));
     if (clearcartFlag) {
       dispatch({ type: "CLEAR_CART" });
     }

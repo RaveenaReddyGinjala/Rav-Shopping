@@ -1,7 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { BsLinkedin } from "react-icons/bs";
-import { IoLogoGithub } from "react-icons/io";
 
 import {
   AiFillGithub,

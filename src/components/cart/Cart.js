@@ -1,25 +1,12 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
-import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 import emptycart from "../../assests/emptycartremovebg.png";
 
-import {
-  changeProductCount,
-  removeCartItem,
-  addSaveForLater,
-} from "../../redux/Action";
-
-import { FiMinusCircle } from "react-icons/fi";
-
-import { IoMdAddCircleOutline } from "react-icons/io";
-
 function Cart() {
-  // const { cart, saveforlater } = useSelector((state) => state);
   const cart = useSelector((state) => state.cart);
   const saveforlater = useSelector((state) => state.saveforlater);
-  const navigate = useNavigate();
 
   return (
     <div className="cart">
