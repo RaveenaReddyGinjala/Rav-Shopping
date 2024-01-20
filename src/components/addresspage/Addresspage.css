@@ -63,4 +63,26 @@ min-height: 60%;
     justify-content: center;
     width: 100%;
 }
+@media (max-width:1024px){
+    .address-page-container{
+       
+       width: 40%;
+       
+       }
+}
+
+@media (max-width:798px){
+    .address-page-container{
+       
+       width: 50%;
+       
+       }
+}
+@media (max-width:500px){
+    .address-page-container{
+       
+       width: 70%;
+       
+       }
+}
 

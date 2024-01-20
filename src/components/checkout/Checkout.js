@@ -10,55 +10,14 @@ function Checkout() {
   const cart = useSelector((state) => state.checkedproduct);
   const user = useSelector((state) => state.user);
 
-  const cart1 = [
-    {
-      id: 3,
-      title: "Samsung Universe 9",
-      description:
-        "Samsung's new variant which goes beyond Galaxy to the Universe",
-      price: 1249,
-      discountPercentage: 15.46,
-      rating: 4.09,
-      stock: 36,
-      brand: "Samsung",
-      category: "smartphones",
-      thumbnail: "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      images: ["https://cdn.dummyjson.com/product-images/3/1.jpg"],
-      count: 1,
-      oldPrice: 1478,
-    },
-    {
-      id: 2,
-      title: "iPhone X",
-      description:
-        "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      price: 899,
-      discountPercentage: 17.94,
-      rating: 4.44,
-      stock: 34,
-      brand: "Apple",
-      category: "smartphones",
-      thumbnail: "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-      images: [
-        "https://cdn.dummyjson.com/product-images/2/1.jpg",
-        "https://cdn.dummyjson.com/product-images/2/2.jpg",
-        "https://cdn.dummyjson.com/product-images/2/3.jpg",
-        "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-      ],
-      count: 1,
-      oldPrice: 1096,
-    },
-  ];
-
   useEffect(() => {
     console.log(user);
     console.log(!user);
     if (!user) {
       navigate("/login", { state: { referrer: "checkout" } });
     }
-  }, [user]);
+  }, [user, navigate]);
 
-  console.log(cart1);
   const [cartNewPrice, setCartNewPrice] = useState("");
   const [cartOldPrice, setOldNewPrice] = useState("");
   const [cartDiscount, setCartDiscount] = useState("");
@@ -80,7 +39,7 @@ function Checkout() {
     setOldNewPrice(totalOldPrice);
     setCartDiscount(totalOldPrice - totalNewPrice);
     setTotalAmount(totalNewPrice);
-  }, []);
+  }, [cart]);
 
   function handleCheckout() {
     navigate("/addresspage");

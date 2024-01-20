@@ -30,7 +30,7 @@ function Product() {
 
       console.log(response.data);
     });
-  }, []);
+  }, [id]);
 
   function calculateActualPrice(newPrice, discountPercentage) {
     let oldPrice = 0;
@@ -75,6 +75,7 @@ function Product() {
           <div className="single-product-img-container">
             <img
               src={listImage ? listImage : product.thumbnail}
+              alt="img"
               className="single-product-img"
             ></img>
           </div>

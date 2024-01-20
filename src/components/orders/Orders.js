@@ -7,6 +7,8 @@ import firebase from "../../firebase";
 import { useEffect } from "react";
 import orderempty from "../../assests/ordersempty.png";
 import Loader from "../loader/Loader";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -39,8 +41,8 @@ function Orders() {
   function handleOrderCancel(key) {
     console.log(key);
     const orderRef = firebase.database().ref(`orders/${user}`).child(`${key}`);
-
     orderRef.remove();
+    toast.success("order cancelled successfully");
 
     setRefreshUI(!refreshUI);
   }
@@ -55,10 +57,7 @@ function Orders() {
             <div className="order-container" key={order.orderDetails.id}>
               <div className="order-container-left">
                 <div className="order-container-left-img-container">
-                  <img
-                    src={order.orderDetails.thumbnail}
-                    alt={order.orderDetails.title}
-                  ></img>
+                  <img src={order.orderDetails.thumbnail} alt="img"></img>
                 </div>
                 <div className="order-container-left-details-container">
                   <label>{order.orderDetails.title}</label>
@@ -81,7 +80,11 @@ function Orders() {
         </div>
       ) : (
         <div className="no-orders-conatiner">
-          <img className="no-orders-conatiner-img" src={orderempty}></img>
+          <img
+            className="no-orders-conatiner-img"
+            src={orderempty}
+            alt="empty-img"
+          ></img>
         </div>
       )}
     </div>

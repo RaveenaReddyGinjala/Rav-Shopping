@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.css";
-import CustomButton from "../../customcomponents/custombutton/CustomButton";
+
 import CustomInput from "../../customcomponents/custominput/CustomInput";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
